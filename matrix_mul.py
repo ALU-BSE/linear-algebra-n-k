@@ -1,24 +1,26 @@
 import pandas as pd
 import numpy as np
 
-# Load data
-data = pd.read_csv('path/to/data')
-
 # Example arrays
-Prices = [[300, 500],
-          [1000, 120.85]]
+Prices = [[300, 500],  
+          [1000, 120.85]]  # 2x2 matrix representing prices of two items
 
-Array2 = [200, 100]
+Array2 = [200, 100]  # A list that contains quantities of the items
 
-# Calculate the result
+# Initialize an empty list to store the results
 Ans = []
-# (300*200 + 500*100) as an example calculation
 
+# Iterate over each row in the Prices matrix
 for i in range(len(Prices)):
-    row_sum = 0
+    row_sum = 0  # To store the sum of products for the current row
+    
+    # Iterate over each element in the current row of Prices
     for j in range(len(Prices[0])):
-        # COMPLETE THE MISSING LOGIC HERE
-        pass
+        # Multiply corresponding element in the row with the element in Array2
+        row_sum += Prices[i][j] * Array2[j]
+    
+    # Append the computed row_sum (dot product for the current row) to the Ans list
+    Ans.append(row_sum)
 
-
+# Print the result which will contain the dot products
 print(Ans)
