@@ -1,19 +1,23 @@
+import pandas as pd
+import numpy as np
 
-# Example arrays 
+# Load data
+data = pd.read_csv('path/to/data')
+
+# Example arrays
 Prices = [[300, 500],
           [1000, 120.85]]
 
-Array2 = [200, 100]
+Array2 = [200, 100]  # A list that contains quantities of the items
 
 # Initialize an empty list to store the results
 Ans = []
 
-# Loop through each row in Prices
 for i in range(len(Prices)):
-    row_sum = 0  # Initialize the sum for the current row
-    for j in range(len(Prices[i])):  # Loop through each element in the row
-        row_sum += Prices[i][j] * Array2[j]  # Multiply corresponding elements and add to row_sum
-    Ans.append(row_sum)  # Append the computed row sum to the result list
+    row_sum = 0
+    for j in range(len(Prices[0])):
+        # COMPLETE THE MISSING LOGIC HERE
+        pass
 
-# Print the result
+
 print(Ans)
