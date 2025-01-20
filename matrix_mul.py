@@ -1,6 +1,3 @@
-import pandas as pd
-import numpy as np
-
 # Example arrays
 Prices = [[300, 500],  
           [1000, 120.85]]  # 2x2 matrix representing prices of two items
